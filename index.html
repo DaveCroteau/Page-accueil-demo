@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="script.js"></script>
+		<title>École de musique | Demo</title>
+	</head>
+	<body>
+		<div class="bg-img1">
+			<div class="text">
+				<span class="border">École de musique</span>
+			</div>
+		</div>
+
+		<section class="section-light">
+			<h2>Notre mission</h2>
+			<p>
+				Offrir une formation personnalisée, structurée et de haut niveau, permettant à chacun de s’épanouir dans un environnement humain et
+				riche en expériences musicales, tant pour le musicien qui débute que pour celui qui choisit de faire de la musique sa carrière.
+			</p>
+		</section>
+
+		<div class="bg-img2">
+			<div class="text">
+				<span class="border trans no-pad">Plusieurs Instruments</span>
+			</div>
+		</div>
+
+		<section class="section-dark">
+			<h2>Instruments</h2>
+			<p>
+				Nous avons une équipe d’enseignants professionnels, qualifiés et branchés, offrant une formation de qualité basée sur des techniques
+				d’enseignement d’avant-garde pour tous les instruments.
+			</p>
+			<div class="wrap">
+				<div id="instruments">
+					<div class="instrument">
+						<span>Batterie</span>
+					</div>
+					<div class="instrument">
+						<span>Guitar</span>
+					</div>
+					<div class="instrument">
+						<span>Basse</span>
+					</div>
+					<div class="instrument">
+						<span>Piano</span>
+					</div>
+					<div class="instrument">
+						<span>Chant</span>
+					</div>
+					<div class="instrument">
+						<span>Violon</span>
+					</div>
+					<div class="instrument">
+						<span>Saxophone</span>
+					</div>
+					<div class="instrument">
+						<span>Trompette</span>
+					</div>
+					<div class="instrument">
+						<span>Trombone</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="bg-img3">
+			<div class="text">
+				<span class="border trans">Horaire flexible</span>
+			</div>
+		</div>
+
+		<section class="section-dark">
+			<h2>Horaire</h2>
+			<div id="horaire">
+				<div class="cell d1">Lundi</div>
+				<div class="cell d2">Mardi</div>
+				<div class="cell d3">Mercredi</div>
+				<div class="cell d4">Jeudi</div>
+				<div class="cell d5">Vendredi</div>
+				<div class="cell d6">Samedi</div>
+				<div class="cell d7">Dimanche</div>
+
+				<div class="cell o1">16h</div>
+				<div class="cell o2">16h</div>
+				<div class="cell o3">16h</div>
+				<div class="cell o4">16h</div>
+				<div class="cell o5">16h</div>
+				<div class="cell o6">9h</div>
+				<div class="cell o7">9h</div>
+
+				<div class="cell c1">21h</div>
+				<div class="cell c2">21h</div>
+				<div class="cell c3">21h</div>
+				<div class="cell c4">21h</div>
+				<div class="cell c5">21h</div>
+				<div class="cell c6">17h</div>
+				<div class="cell c7">17h</div>
+			</div>
+
+			<p>* Ces horaires peuvent changer selon vos besoins</p>
+		</section>
+
+		<div class="bg-img1">
+			<div id="contact-btn" class="text">
+				<div><span class="border">Contactez-nous</span></div>
+			</div>
+		</div>
+
+		<div class="form-bg">
+			<div class="form-container">
+				<div class="form-title">
+					<h1>Contactez-nous</h1>
+				</div>
+				<form id="contact-form" name="contact-form" data-netlify="true">
+					<div class="form-field">
+						<label class="form-label" for="name">Nom:</label>
+						<input id="name" class="form-input" type="text" name="name" placeholder="Votre nom" autocomplete="off" required />
+					</div>
+
+					<div class="form-field">
+						<label class="form-label" for="email">Courriel:</label>
+						<input id="email" class="form-input" type="email" name="email" placeholder="Votre courriel" autocomplete="off" required />
+					</div>
+
+					<div class="form-field">
+						<label class="form-label" for="subject">Objet:</label>
+						<input id="subject" class="form-input" type="text" name="subject" placeholder="Objet" autocomplete="off" required />
+					</div>
+
+					<div class="form-field">
+						<label class="form-label" for="message">Message:</label>
+						<textarea
+							id="message"
+							class="form-input"
+							name="message"
+							placeholder="Votre message..."
+							autocomplete="off"
+							required
+						></textarea>
+					</div>
+
+					<div class="form-footer">
+						<div class="form-confirmation"></div>
+
+						<div class="outer-btn">
+							<button id="submit" class="btn" type="button">Envoyer</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

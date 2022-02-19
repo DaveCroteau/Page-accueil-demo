@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+	--dark-text: #666;
+	--light-text: #ddd;
+	--super-light-text: #fff;
+	--dark-bg: #282e34;
+	--light-bg: #f4f4f4;
+	--gradient: linear-gradient(135deg, #333, #111);
+	--shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'Roboto', 'Times New Roman', Times, serif;
+	height: 100vh;
+	font-weight: 400;
+	line-height: 1.8em;
+	color: var(--dark-text);
+}
+
+.text {
+	font-size: clamp(1rem, 1vw + 0.7rem, 5rem);
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+}
+
+.border {
+	background: var(--gradient);
+	color: var(--light-text);
+	padding: 1rem 2rem;
+	border-radius: 5px;
+}
+
+.no-pad {
+	padding: 0;
+}
+
+section > h2 {
+	padding-bottom: 1.5rem;
+}
+
+.bg-img1,
+.bg-img2,
+.bg-img3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	opacity: 75%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; /* this makes the parallax effect */
+}
+
+.bg-img1 {
+	background-image: url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	min-height: 100%;
+}
+
+.bg-img2 {
+	background-image: url('https://images.pexels.com/photos/995301/pexels-photo-995301.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	min-height: 70%;
+}
+
+.bg-img3 {
+	background-image: url('https://images.pexels.com/photos/352505/pexels-photo-352505.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+	min-height: 70%;
+}
+
+section {
+	text-align: center;
+	padding: 5rem;
+}
+
+section p {
+	max-width: 60%;
+	margin: auto;
+}
+
+@media (max-width: 900px) {
+	section p {
+		max-width: 100%;
+	}
+}
+
+.section-light {
+	background: var(--light-bg);
+}
+
+.section-dark {
+	background: var(--dark-bg);
+	color: var(--light-text);
+}
+
+.trans {
+	background: transparent;
+	color: white;
+}
+
+.wrap {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#instruments {
+	margin: 5rem auto 1rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.instrument {
+	border: 1px solid var(--light-text);
+	font-size: 1.2rem;
+	padding: 3rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+
+.instrument:hover {
+	transform: scale(1.1);
+}
+
+#horaire {
+	width: 80%;
+	margin: 0 auto 1rem;
+	border: 1px solid #ddd;
+	display: grid;
+	grid-template-areas:
+		'd1 d2 d3 d4 d5 d6 d7'
+		'o1 o2 o3 o4 o5 o6 o7'
+		'c1 c2 c3 c4 c5 c6 c7';
+	grid-auto-rows: minmax(2rem, 1fr);
+}
+
+@media (max-width: 800px) {
+	#horaire {
+		grid-template-areas:
+			'd1 o1 c1'
+			'd2 o2 c2'
+			'd3 o3 c3'
+			'd4 o4 c4'
+			'd5 o5 c5'
+			'd6 o6 c6'
+			'd7 o7 c7';
+	}
+}
+
+.d1 {
+	grid-area: d1;
+}
+.d2 {
+	grid-area: d2;
+}
+.d3 {
+	grid-area: d3;
+}
+.d4 {
+	grid-area: d4;
+}
+.d5 {
+	grid-area: d5;
+}
+.d6 {
+	grid-area: d6;
+}
+.d7 {
+	grid-area: d7;
+}
+
+.o1 {
+	grid-area: o1;
+}
+.o2 {
+	grid-area: o2;
+}
+.o3 {
+	grid-area: o3;
+}
+.o4 {
+	grid-area: o4;
+}
+.o5 {
+	grid-area: o5;
+}
+.o6 {
+	grid-area: o6;
+}
+.o7 {
+	grid-area: o7;
+}
+
+.c1 {
+	grid-area: c1;
+}
+.c2 {
+	grid-area: c2;
+}
+.c3 {
+	grid-area: c3;
+}
+.c4 {
+	grid-area: c4;
+}
+.c5 {
+	grid-area: c5;
+}
+.c6 {
+	grid-area: c6;
+}
+.c7 {
+	grid-area: c7;
+}
+
+#contact-btn {
+	cursor: pointer;
+}
+
+.form-bg {
+	height: 100vh;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	inset: 0;
+	display: none;
+}
+
+.form-bg.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.form-container {
+	background-color: var(--light-bg);
+	min-height: 60vh;
+	width: 90%;
+	max-width: 600px;
+	padding: 2rem;
+	overflow-y: auto;
+	border-radius: 10px;
+	animation: slide 1s ease;
+}
+
+@keyframes slide {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.form-title {
+	text-align: center;
+	position: relative;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	height: 3rem;
+}
+
+.form-title::after {
+	content: '';
+	width: 40px;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: var(--dark-text);
+	transform: translateX(-50%);
+	border-radius: 5px;
+}
+
+.form-field {
+	margin-bottom: 0.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.field-error {
+	outline: 2px solid red;
+}
+
+.form-input {
+	background-color: var(--light-text);
+	padding: 0.5rem;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+.form-input::placeholder {
+	opacity: 0.2;
+}
+
+.form-input:focus {
+	outline: none;
+	box-shadow: var(--shadow);
+}
+
+#message {
+	resize: none;
+	height: 10rem;
+	font-family: inherit;
+}
+
+.form-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	flex-wrap: wrap-reverse;
+	margin-top: 1rem;
+}
+
+.form-confirmation {
+	padding: 0.5rem 1rem;
+	flex-grow: 5;
+	min-width: 18rem;
+	text-align: center;
+	border-radius: 5px;
+	color: var(--light-text);
+	opacity: 0;
+	transition: all 0.2s ease;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.6;
+	}
+}
+
+.form-success {
+	background: green;
+	display: inline-block;
+	animation: fade-in;
+	opacity: 0.6;
+}
+
+.form-error {
+	background: darkred;
+	display: inline-block;
+	animation: fade-in;
+	opacity: 0.6;
+}
+
+#contact-form .outer-btn {
+	text-align: right;
+	flex-grow: 1;
+}
+
+#submit {
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	background-color: var(--light-bg);
+	color: var(--dark-text);
+	border: 2px solid var(--dark-text);
+	transition: all 0.2s ease;
+	line-height: 1.8em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#submit:hover {
+	background-color: var(--dark-bg);
+	color: var(--light-text);
+	border: 2px solid transparent;
+}
