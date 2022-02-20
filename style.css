@@ -44,6 +44,10 @@ body {
 	border-radius: 5px;
 }
 
+.no-pad {
+	padding: 0;
+}
+
 section > h2 {
 	padding-bottom: 1.5rem;
 }
@@ -248,12 +252,8 @@ section p {
 
 #contact-btn {
 	cursor: pointer;
-}
-
-#test {
-	position: absolute;
-	bottom: 2rem;
-	padding: 2rem;
+	outline: none;
+	border: none;
 }
 
 .form-bg {
@@ -357,7 +357,7 @@ section p {
 
 .form-footer {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-end;
 	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap-reverse;
@@ -396,15 +396,6 @@ section p {
 	display: inline-block;
 	animation: fade-in;
 	opacity: 0.6;
-}
-
-#contact-form .outer-btn {
-	text-align: right;
-	flex-grow: 1;
-}
-
-.outer-btn {
-	cursor: pointer;
 }
 
 #submit {
