@@ -65,6 +65,14 @@ section > h2 {
 	background-attachment: fixed; /* this makes the parallax effect */
 }
 
+@media (max-width: 600px) {
+	.bg-img1,
+	.bg-img2,
+	.bg-img3 {
+		background-attachment: scroll;
+	}
+}
+
 .bg-img1 {
 	background-image: url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
 	min-height: 100%;
