@@ -8,6 +8,10 @@ document.querySelector('.form-bg').addEventListener('click', e => {
 	}
 })
 
+document.querySelector('#test').addEventListener('click', e => {
+	alert('test')
+})
+
 function validateEmail(email) {
 	return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ? true : false
 }
