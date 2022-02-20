@@ -263,6 +263,7 @@ section p {
 	position: fixed;
 	inset: 0;
 	display: none;
+	z-index: 2;
 }
 
 .form-bg.active {
@@ -279,6 +280,12 @@ section p {
 	padding: 2rem;
 	border-radius: 10px;
 	animation: slide 1s ease;
+}
+
+@media (max-width: 400px) {
+	.form-container {
+		animation: none;
+	}
 }
 
 @keyframes slide {
