@@ -246,9 +246,7 @@ section p {
 	grid-area: c7;
 }
 
-#contact-btn,
-#contact-btn div,
-#contact-btn span {
+#contact-btn {
 	cursor: pointer;
 }
 
