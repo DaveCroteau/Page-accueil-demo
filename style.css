@@ -246,7 +246,9 @@ section p {
 	grid-area: c7;
 }
 
-#contact-btn {
+#contact-btn,
+#contact-btn div,
+#contact-btn span {
 	cursor: pointer;
 }
 
@@ -393,9 +395,12 @@ section p {
 }
 
 #contact-form .outer-btn {
-	cursor: pointer;
 	text-align: right;
 	flex-grow: 1;
+}
+
+.outer-btn {
+	cursor: pointer;
 }
 
 #submit {
