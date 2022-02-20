@@ -1,4 +1,5 @@
 document.querySelector('#contact-btn').addEventListener('click', () => {
+	alert('clicked')
 	document.querySelector('.form-bg').classList.toggle('active')
 })
 
