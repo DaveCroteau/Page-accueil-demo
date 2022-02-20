@@ -1,19 +1,10 @@
-document.querySelector('#contact-btn').addEventListener('click', () => {
-	document.querySelector('.form-bg').classList.toggle('active')
-})
-
-document.querySelector('.form-bg').addEventListener('click', e => {
-	if (e.target.matches('.form-bg')) {
-		document.querySelector('.form-bg').classList.toggle('active')
-	}
-})
-
 function validateEmail(email) {
 	return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ? true : false
 }
 
 document.querySelector('#submit').addEventListener('click', e => {
 	e.preventDefault()
+	console.log('click')
 
 	const form = document.querySelector('#contact-form')
 	const elements = [...form.elements].filter(el => el.type != 'button')
