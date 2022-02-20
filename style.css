@@ -393,6 +393,7 @@ section p {
 }
 
 #contact-form .outer-btn {
+	cursor: pointer;
 	text-align: right;
 	flex-grow: 1;
 }
