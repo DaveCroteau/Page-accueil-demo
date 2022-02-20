@@ -8,16 +8,6 @@ document.querySelector('.form-bg').addEventListener('click', e => {
 	}
 })
 
-document.querySelector('#contact-btn').addEventListener('touchstart', () => {
-	document.querySelector('.form-bg').classList.toggle('active')
-})
-
-document.querySelector('.form-bg').addEventListener('touchstart', e => {
-	if (e.target.matches('.form-bg')) {
-		document.querySelector('.form-bg').classList.toggle('active')
-	}
-})
-
 function validateEmail(email) {
 	return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ? true : false
 }
