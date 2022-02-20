@@ -1,8 +1,8 @@
-document.querySelector('#contact-btn').addEventListener('click', () => {
+document.querySelector('#contact-btn').addEventListener('click' || 'touchstart', () => {
 	document.querySelector('.form-bg').classList.toggle('active')
 })
 
-document.querySelector('.form-bg').addEventListener('click', e => {
+document.querySelector('.form-bg').addEventListener('click' || 'touchstart', e => {
 	if (e.target.matches('.form-bg')) {
 		document.querySelector('.form-bg').classList.toggle('active')
 	}
@@ -12,7 +12,7 @@ function validateEmail(email) {
 	return email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ? true : false
 }
 
-document.querySelector('#submit').addEventListener('click', e => {
+document.querySelector('#submit').addEventListener('click' || 'touchstart', e => {
 	e.preventDefault()
 
 	const form = document.querySelector('#contact-form')
@@ -79,7 +79,7 @@ document.querySelector('#submit').addEventListener('click', e => {
 		.catch(error => console.log(error))
 })
 
-document.querySelector('#contact-form').addEventListener('input', e => {
+document.querySelector('#contact-form').addEventListener('change', e => {
 	if ([...e.target.classList].includes('field-error')) {
 		e.target.classList.remove('field-error')
 	}
