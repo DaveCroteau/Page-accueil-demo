@@ -260,9 +260,11 @@ section p {
 	height: 100vh;
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.7);
-	position: fixed;
+	/* position: fixed; */
 	inset: 0;
-	display: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 2;
 }
 
@@ -280,12 +282,6 @@ section p {
 	padding: 2rem;
 	border-radius: 10px;
 	animation: slide 1s ease;
-}
-
-@media (max-width: 400px) {
-	.form-container {
-		animation: none;
-	}
 }
 
 @keyframes slide {
