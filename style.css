@@ -327,7 +327,6 @@ section p {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 1rem;
 	flex-wrap: wrap-reverse;
 	margin-top: 1rem;
 }
@@ -341,6 +340,7 @@ section p {
 	color: var(--light-text);
 	opacity: 0;
 	transition: all 0.2s ease;
+	margin: 1rem;
 }
 
 @keyframes fade-in {
