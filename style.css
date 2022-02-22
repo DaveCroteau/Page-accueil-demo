@@ -299,7 +299,7 @@ section p {
 }
 
 .form-input::placeholder {
-	opacity: 0.2;
+	opacity: 0.5;
 }
 
 .form-input:focus {
